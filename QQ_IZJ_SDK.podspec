@@ -109,7 +109,7 @@ Pod::Spec.new do |s|
   # s.resources = "Resources/*.png"
   # s.resources = "TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
   s.vendored_frameworks = 'TencentOpenAPI/TencentOpenAPI.framework'
-  s.public_header_files = "TencentOpenAPI/TencentOpenAPI.framework/Headers/**/*.h"
+  # s.public_header_files = "TencentOpenAPI/TencentOpenAPI.framework/Headers/**/*.h"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
