@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QQ_IZJ_SDK"
-  s.version      = "0.0.7"
+  s.version      = "1.0.0"
   s.summary      = "爱自驾集成腾讯三方登录分享等功能"
 
   # This description is used to generate tags and improve search results.
