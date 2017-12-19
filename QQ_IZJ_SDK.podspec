@@ -25,8 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   利用cocoaPods完成集成第三方登录的配置，就是添加各种依赖库和linkFlag
-
+                   DESC
   s.homepage     = "https://github.com/qussers/QQ_IZJ_SDK"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
