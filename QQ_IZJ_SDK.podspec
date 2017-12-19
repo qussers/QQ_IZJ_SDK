@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-  s.resources = "TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
+  # s.resources = "TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
   s.vendored_frameworks = 'TencentOpenAPI/TencentOpenAPI.framework'
   s.public_header_files = "TencentOpenAPI/TencentOpenAPI.framework/Headers/**/*.h"
 
