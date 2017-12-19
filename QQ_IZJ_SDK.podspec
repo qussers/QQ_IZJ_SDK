@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QQ_IZJ_SDK"
-  s.version      = "0.0.1"
+  s.version      = "0.0.7"
   s.summary      = "爱自驾集成腾讯三方登录分享等功能"
 
   # This description is used to generate tags and improve search results.
@@ -85,15 +85,16 @@ Pod::Spec.new do |s|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
+  #  giving a folder will include any h, m, mm, c & cpp files. For header
+  #  files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
 
-  # s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  # s.exclude_files = "Classes/Exclude"
+  #s.source_files  = ""
+  #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
+  # s.ios.vendored_library = ""
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,8 +105,11 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-   s.resources  = "QQ_IZJ_SDK/**/*.{bundle}"
+  # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
+  s.resources = "TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
+  s.vendored_frameworks = 'TencentOpenAPI/TencentOpenAPI.framework'
+  s.public_header_files = "TencentOpenAPI/TencentOpenAPI.framework/Headers/**/*.h"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -116,13 +120,13 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  s.frameworks =  "Photos", "Foundation", "UIKit", "CoreGraphics", "CoreText", "CoreTelephony", "Security", "ImageIO", "QuartzCore", "SystemConfiguration"
-
+  #s.framework  = "SomeFramework"
+  #s.frameworks = "SystemConfiguration", "CoreTelephony"
 
   # s.library   = "iconv"
-  s.libraries = "stdc++", "sqlite3", "iconv", "c++", "sqlite3.0", "z"
 
+  s.frameworks = 'Security','CoreTelephony','SystemConfiguration','CoreGraphics'
+  s.libraries  = 'z','sqlite3','iconv','stdc++'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -132,5 +136,4 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 end
