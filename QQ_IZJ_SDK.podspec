@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-	        	方便爱自驾集成
+	        	方便爱自驾集成QQ登录分享等功能，不一定跟新
                    DESC
   s.homepage     = "https://github.com/qussers/QQ_IZJ_SDK"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
