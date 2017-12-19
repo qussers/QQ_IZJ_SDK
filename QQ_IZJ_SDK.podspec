@@ -117,10 +117,11 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks =  "Photos", "Foundation", "UIKit", "CoreGraphics", "CoreText", "CoreTelephony", "Security", "ImageIO", "QuartzCore", "SystemConfiguration"
+
 
   # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
+  s.libraries = "stdc++", "sqlite3", "iconv", "c++", "sqlite3.0", "z"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,21 +133,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
-  s.default_subspec = 'Core'
-
-    s.subspec 'Core' do |core|
-        core.source_files = "QQ_IZJ_SDK", "QQ_IZJ_SDK/**/*.{h,m}"
-        core.frameworks = "Photos", "Foundation", "UIKit", "CoreGraphics", "CoreText", "CoreTelephony", "Security", "ImageIO", "QuartzCore", "SystemConfiguration"
-        core.libraries = "stdc++", "sqlite3", "iconv", "c++", "sqlite3.0", "z"
-        core.vendored_libraries = "QQ_IZJ_SDK/**/*.{a}"
-        core.vendored_frameworks = "QQ_IZJ_SDK/**/*.{framework}"
-    end
-    s.subspec 'SwiftSetting' do |setting|
-       # setting.source_files = "/*.{h,m}"
-        setting.frameworks = "Photos", "Foundation", "UIKit", "CoreGraphics", "CoreText", "CoreTelephony", "Security", "ImageIO", "QuartzCore", "SystemConfiguration"
-        setting.libraries = "stdc++", "sqlite3", "iconv", "c++", "sqlite3.0", "z"
-        setting.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-l"stdc++" -l"sqlite3" -l"iconv" -l"c++" -l"sqlite3.0" -l"z" -framework "CoreGraphics" -framework "CoreText" -framework "CoreTelephony" -framework "Security" -framework "ImageIO" -framework "QuartzCore" -framework "SystemConfiguration" -framework "Photos" ' }
-
-    end
 end
